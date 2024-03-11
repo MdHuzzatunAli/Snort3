@@ -1,0 +1,44 @@
+1. sudo apt install cmake flex g++ openssl pkg-config zlib1g bison autoconf libtool liblzma-dev
+2. install luajit
+    -- git clone https://luajit.org/git/luajit.git
+    -- run make && sudo make install
+3. install pcap
+    -- download from https://www.tcpdump.org/
+    -- run ./configure
+    -- make && sudo make install
+4 install pcre
+    -- download from https://sourceforge.net/projects/pcre/
+    -- run ./configure
+    -- make && sudo make install
+
+5. install libdaq
+    -- download from https://github.com/snort3/libdaq/releases/tag/v3.0.14
+    -- run ./bootstrap
+    -- run ./configure
+    -- make && sudo make install
+
+6. install libnet
+    -- sudo apt install check
+    -- download from https://github.com/ofalk/libdnet/releases/tag/libdnet-1.17.0
+    -- run ./configure
+    -- make && sudo make install
+
+5. install hwloc
+    -- download from https://www.open-mpi.org/software/hwloc/v2.10/
+    -- run ./configure
+    -- make && sudo make install
+
+6. install zlib
+    -- download from https://zlib.net/
+    -- run ./configure
+    -- make && sudo make install
+
+7. install snort3
+    -- download from https://github.com/snort3/snort3/tree/master
+    -- run  ./configure_cmake.sh --prefix=/usr
+    -- add executable permission for
+        -- "src/lua_wrap.sh"
+        -- "src/managers/ffi_wrap.sh"
+    -- cd build
+    -- make -j $(nproc)
+    -- sudo make install
